@@ -1,7 +1,7 @@
 import fs from 'fs'
 import {jsonPath} from '../utils/initTasksFile.js'
 
-const markInProgressTask = id => {
+const markDoneTask = id => {
   if (!id) {
     console.log('Please enter your task id')
     return
@@ -16,11 +16,11 @@ const markInProgressTask = id => {
   }
 
   tasks = tasks.map(task =>
-    task.id == id ? {...task, status: 'in-progress', updatedAt: new Date().toISOString()} : task
+    task.id == id ? {...task, status: 'done', updatedAt: new Date().toISOString()} : task
   )
 
   fs.writeFileSync(jsonPath, JSON.stringify({tasks}, null, 2), 'utf8')
-  console.log(`Task marked with "in-progress" successfully (ID: ${id})`)
+  console.log(`Task marked with "done" successfully (ID: ${id})`)
 }
 
-export default markInProgressTask
+export default markDoneTask
