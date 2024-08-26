@@ -2,6 +2,7 @@
 
 import initTasksFile from './src/utils/initTasksFile.js'
 import addTask from './src/commands/addTask.js'
+import deleteTask from './src/commands/deleteTask.js'
 
 initTasksFile()
 const args = process.argv.slice(2)
@@ -17,6 +18,11 @@ switch (command) {
   case 'add': {
     const description = args[1]
     addTask(description)
+    break
+  }
+  case 'delete': {
+    const id = args[1]
+    deleteTask(id)
     break
   }
   case 'help':

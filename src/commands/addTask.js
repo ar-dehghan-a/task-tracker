@@ -15,7 +15,6 @@ const addTask = description => {
     description: description,
     status: 'todo',
     createdAt: new Date().toISOString(),
-    updatedAt: null,
   }
 
   tasks.push(newTask)
