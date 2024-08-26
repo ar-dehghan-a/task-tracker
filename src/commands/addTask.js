@@ -3,7 +3,7 @@ import {jsonPath} from '../utils/initTasksFile.js'
 
 const addTask = description => {
   if (!description) {
-    console.log('Please enter your task')
+    console.log('Please enter your task description')
     return
   }
   const data = fs.readFileSync(jsonPath)
