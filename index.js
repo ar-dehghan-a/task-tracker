@@ -6,6 +6,7 @@ import deleteTask from './src/commands/deleteTask.js'
 import updateTask from './src/commands/updateTask.js'
 import markInProgressTask from './src/commands/markInProgressTask.js'
 import markDoneTask from './src/commands/markDoneTask.js'
+import listTasks from './src/commands/listTasks.js'
 
 initTasksFile()
 const args = process.argv.slice(2)
@@ -42,6 +43,11 @@ switch (command) {
   case 'mark-done': {
     const id = args[1]
     markDoneTask(id)
+    break
+  }
+  case 'list': {
+    const filter = args[1]
+    listTasks(filter)
     break
   }
   case 'help':
