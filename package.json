@@ -1,0 +1,31 @@
+{
+  "name": "task-tracker-cli",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "bin": {
+    "task-cli": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Alireza Dehghan",
+    "email": "ar.dehghan.a@gmail.com",
+    "url": "https://github.com/ar-dehghan-a"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ar-dehghan-a/task-tracker-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ar-dehghan-a/task-tracker-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ar-dehghan-a/task-tracker-cli/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "eslint": "^9.9.1",
+    "globals": "^15.9.0"
+  }
+}
