@@ -12,7 +12,8 @@ initTasksFile()
 const args = process.argv.slice(2)
 
 if (args.length === 0) {
-  console.log('Usage: my-cli <command> [options]')
+  console.log('Usage: task-cli <command> [options]')
+  console.log('Use "task-cli help" for a list of available commands.')
   process.exit(1)
 }
 
@@ -52,8 +53,13 @@ switch (command) {
   }
   case 'help':
     console.log('Available commands:')
-    console.log('  greet <name>  - Greets the person')
-    console.log('  help         - Shows this help message')
+    console.log('  add <description>          - Add a task')
+    console.log('  delete <id>                - Delete task')
+    console.log('  update <id> <description>  - Update task')
+    console.log('  mark-in-progress <id>      - Marked task with "in-progress"')
+    console.log('  mark-done <id>             - Marked task with "done"')
+    console.log('  list                       - Listing all tasks')
+    console.log('  list <status>              - Listing tasks by status')
     break
   default:
     console.log(`Unknown command: ${command}`)
